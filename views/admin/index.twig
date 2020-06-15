@@ -1,0 +1,37 @@
+{% extends 'admin/layout.twig'%}
+
+{% block body%}
+    <h1>page admin</h1>
+    <div class="row">
+        <form method="put">
+            <h2 class="h3 mb-3 font-weight-normal">Identification</h2>
+            <div>
+                <label for="inputEmail" class="sr-only mb-3 ">Email</label>
+                <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+                <br>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            </div>
+            <br>
+            <button class="btn btn-lg btn-primary grey center" id="login" type="submit">Identification</button>
+        </form>
+    </div>
+    <br>
+    <span>Creer un compte utilisateur</span>
+    
+        <form method="post">
+            <h2 class="h3 mb-3 font-weight-normal">Creer un compte</h2>
+            <div>
+            <label for="inputEmail" class="sr-only mb-3 ">Email</label>
+                <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+                <br>
+                <label for="inputEmail" class="sr-only mb-3 ">Email</label>
+                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+                <br>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            </div>
+            <br>
+            <button class="btn btn-lg btn-primary grey center" id="register" type="submit">Creations</button>
+        </form>
+{% endblock %}
